@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+}
+
+.description, .description-container, .input-container {
+  width: 225px;
+}
+
+.description {
+  -webkit-transform-origin: 50% 0;
+}
+
+.hidden, .expanded {
+  transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.hidden {
+  opacity: 0;
+  -webkit-transform: rotateX(-60deg);
+}
+
+.expanded {
+  -webkit-transform: rotateX(0deg);
+  opacity: 1;
+}
+
+.input-container, .description {
+  border: 1px solid gray;
+}
+
+.description {
+  border-top: none;
+}
+
+.description-container {
+  -webkit-perspective: 300;
+}
