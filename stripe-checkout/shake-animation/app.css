@@ -1,0 +1,74 @@
+body {
+  font-family: sans-serif;
+}
+
+.box-head, .box-body {
+  border-radius: 3px;
+}
+
+.easing-box {
+  width: 300px;
+  position: absolute;
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -150px;
+  text-align: center;
+}
+
+.easing-box-container {
+  position: fixed;
+  -webkit-perspective: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.box-head {
+  background: #f0f0f2;
+  border-bottom: 1px solid #d3d3d4;
+  border-radius: 5px 5px 0 0 ;
+  height: 10%;
+}
+
+.box-body {
+  background: #f5f5f7;
+  border-radius: 0 0 5px 5px;
+  height: 90%;
+}
+
+.shake {
+  -webkit-animation-duration: 400ms;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-name: shakeAnimation;
+}
+
+
+@-webkit-keyframes shakeAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+  }
+
+  12.5% {
+    -webkit-transform: translateX(-6px) rotateY(-5deg);
+  }
+
+  37.5% {
+    -webkit-transform: translateX(5px) rotateY(4deg);
+  }
+
+  62.5% {
+    -webkit-transform: translateX(-3px) rotateY(-2deg);
+  }
+
+  87.5% {
+    -webkit-transform: translateX(2px) rotateY(1deg);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+  }
+}
